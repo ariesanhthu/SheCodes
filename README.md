@@ -1,4 +1,4 @@
-# EcoWaste app
+# EcoWaste
 Sản phẩm được nộp tại SheCodes Hackathon 2023
 ## Giới thiệu sản phẩm:
 Ô nhiễm môi trường đang là vấn đề được Việt Nam và thế giới quan tâm hàng đầu hiện nay. Một trong những nguyên nhân chính gây ô nhiễm đó là do chúng ta không phân loại những loại rác có thể tái chế được từ rác thải sinh hoạt mà vứt chúng ra môi trường hoặc chỉ thu gom và phân hủy. Không chỉ vậy, theo báo cáo từ Tổ chức Tài chính Quốc tế (IFC) và Ngân hàng Thế giới, việc không tái chế hết rác thải nhựa từ sinh hoạt đã làm Việt Nam lãng phí gần 3 tỉ USD mỗi năm. Tuy tổng lượng rác thải hằng năm đã tăng gấp đôi trong vòng 15 năm qua và dự báo sẽ tăng từ 27 triệu tấn vào năm 2018 lên 54 triệu tấn vào năm 2030, nhưng chỉ có khoảng 15-30% lượng rác thải được tái chế bởi ngành ve chai-đồng nát thông qua việc thu gom và tập trung về vựa. Mặc dù nghề ve chai đóng góp rất nhiều trong việc phân loại và tái chế rác nhưng qua nhiều nghiên cứu chỉ ra, lực lượng lao động này thường có cuộc sống bấp bênh và chịu nhiều định kiến xã hội.
