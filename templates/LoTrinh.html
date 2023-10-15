@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+    LỘ TRÌNH HÔM NAY
+{% endblock %}
+
+{% block content %}
+<div class="w-100">
+    <div class="h-75">
+        <img src="{{url_for('static', filename='images/LoTrinh.png')}}"/>
+    </div>
+    <div style="position: fixed; bottom: 0; width: 100%;" class="bg-dark w-100 h-25">
+        <div class="row align-items-center w-100 container-fluid">
+            <div class="card mt-2" style="height: fit-content; width: 300px;">
+                <div class="ml-2 row w-100 h-100">
+                    <div class="col float-left align-middle h-100">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center h-100">
+                            <!-- LINK IMG -->
+                            <img src="{{url_for('static', filename='images/carton.jpeg')}}"     
+                            class="rounded img-thumbnail" alt="..." style="height: 100%;">
+                        </div>
+                    </div>
+                    
+                    <div class="col float-right">
+                        <div class="card-body p-0 text-center h-100" style="color: black !important;">
+                          <h6 class="card-title m-0 mt-1">Nguyễn Văn A</h6>
+                          <h6 class="card-title m-0">Trần Hưng Đạo</h6>
+                        </div>
+                    </div>
+      
+                </div>
+            </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

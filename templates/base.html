@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <!-- STATIC STYLE -->
+      <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+
+      <!-- jQuery timepicker-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="/static/jquery.timepicker.min.css">
+      <script src="/static/jquery.timepicker.min.js"></script>  
+     
+       <!-- title -->
+      <title>
+          {% block title %}
+
+          {% endblock %}
+      </title>
+      {% block scripts %}
+      {% endblock scripts %}
+   </head>
+   <body>
+
+     <!-- Navbar here -->
+     <nav class="navbar navbar-dark" style="background-color: #94BCA4;">
+       <!-- brand name -->
+       <a class="navbar-brand" href="{{url_for('home_page')}}">EcoWaste</a>
+        
+        <!-- USER AREA -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold text-white" href="{{url_for('DangNhap')}}">Đăng nhập</a>
+            </li>
+          </ul>
+          
+        <!-- END USER AREA -->
+            </ul>
+          </div>
+     </nav>
+     <!-- end navbar -->
+     <!-- MAIN CONTENT -->
+     <div class="container-fluid">
+       
+       {% block content %}
+       {% endblock %}
+       
+      </div>
+
+          
+      <footer>
+        <div class="">
+          <ul class="nav nav-tabs nav-tabs-bottom row justify-content-center text-center" style="position: fixed; bottom: 0; width: 100%; z-index: 100;">
+            <a class="nav-link col-4" href="">
+              <i class="fa-solid fa-bell"style="color: #94BCA4;"></i>
+            </a>
+            
+            <a class="nav-link col-4 " href="{{url_for('home_page')}}"><i class="fa-solid fa-house" style="color: #94BCA4;"></i></a>
+            
+            <a class="nav-link col-4" href="#"><i class="fa-solid fa-circle-info" style="color: #94BCA4;"></i></a>
+          </ul>
+        </div>
+        
+      </footer>
+      <!-- Future Content here -->
+
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <script src="/static/style.js" charset="utf-8"></script>
+     
+    </body>
+</html>

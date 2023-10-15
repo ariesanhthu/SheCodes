@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}
+    ĐẶT LỊCH BÁN
+{% endblock %}
+{% block scripts %}
+
+<script>
+    // kInitialization of datetimepicker
+    $(document).ready(function(){
+    $('#time').timepicker();
+    });
+</script>
+
+{% endblock scripts %}
+
+{% block content %}
+<!-- form -->
+    <form action="#" method="post">
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Địa chỉ</label>
+            <div class="col-sm-10">
+                <input
+                class="form-control"
+                id="locate"
+                type="text"
+                placeholder="Nhập địa chỉ của bạn"
+                name="locate"
+                required
+                />
+            </div>
+            <div class="col-12">
+                <!-- BẢN ĐỒ -->
+                <a href="{{url_for('map')}}" class="w-100 btn rounded">
+                    <div class="float-left ">
+                        <div class="row bg-light p-2 rounded flex d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-map"></i>
+                            <h5 class="">Chọn vị trí</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="dropdown form-group row col-12">
+            <input type="text" id="time" placeholder="chọn thời gian" class="dropdown"/>
+            
+        </div>
+        <!-- camera -->
+        <canvas id="canvas" style="width: 100px; height: 100px;"></canvas>
+        <video id="video" width="100px" height="100px" autoplay></video>
+        <button id="start-camera">Start Camera</button>
+        <button id="click-photo">Click Photo</button>
+        
+    <button class="mt-3 btn btn--form text-white rounded bg-success col-12" type="submit" value="DangBan">
+        Đăng bán
+    </button>
+
+</form>
+
+<script>
+    let camera_button = document.querySelector("#start-camera");
+    let video = document.querySelector("#video");
+    let click_button = document.querySelector("#click-photo");
+    let canvas = document.querySelector("#canvas");
+
+    var localstream;
+    
+    camera_button.addEventListener('click', async function() {
+   	
+        let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+	localstream = stream;
+    video.srcObject = stream;
+});
+
+click_button.addEventListener('click', function() {
+   	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+   	let image_data_url = canvas.toDataURL('image/jpeg');
+
+   	// data url of the image
+   	console.log(image_data_url);
+    localstream.getTracks()[0].stop();
+});
+</script>
+
+
+{% endblock %}

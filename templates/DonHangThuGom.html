@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+    ĐẶT LỊCH BÁN
+{% endblock %}
+{% block scripts %}
+
+<script>
+    // kInitialization of datetimepicker
+    $(document).ready(function(){
+    $('#time').timepicker();
+    });
+</script>
+
+{% endblock scripts %}
+
+{% block content %}
+<!-- form -->
+    <form action="#" method="post">
+        <div class="dropdown form-group row col-12 bg-dark">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" aria-placeholder="Chọn loại rác">
+              <a class="dropdown-item" href="#">Nhựa</a>
+              <a class="dropdown-item" href="#">Giấy</a>
+              <a class="dropdown-item" href="#">Thủy tinh</a>
+            </div>
+        </div>
+        
+        <div>
+            <h6>Tổng tiền</h6>
+        </div>
+        
+        <button class="mt-3 btn btn--form text-white rounded bg-success col-12" type="submit" value="XaNhan">
+            Xác nhận
+        </button>
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}
+    TRANG CHỦ
+{% endblock %}
+
+{% block content %}
+    <div class="row container mt-4 ml-1">
+    <!-- link here!!! -->
+        <!-- PHÂN CHỨC NĂNG GIỮA NGƯỜI BÁN VÀ ĐẠI LÍ -->
+        <a href="{{url_for('DangBan')}}" class="w-100 btn rounded">
+            
+            <div class="card ">
+                <div class="card-body text-center d-flex justify-content-center">
+                    <div class="float">
+                        <span class="float-left mr-1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <h5 class="card-title float-right">ĐĂNG BÁN</h5>
+                        <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+                    </div>
+                </div>
+            </div>
+            
+        </a>
+        
+        <a href="{{url_for('DonCuaToi')}}" class="w-100 btn rounded">
+            
+            <div class="card ">
+                <div class="card-body text-center d-flex justify-content-center">
+                    <div class="float">
+                        <span class="float-left mr-1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <h5 class="card-title float-right">ĐƠN CỦA TÔI</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- BẢNG GIÁ RÁC -->
+        <a href="{{url_for('DonGia')}}" class="w-100 btn rounded">
+            
+            <div class="card ">
+                <div class="card-body text-center d-flex justify-content-center">
+                    <div class="float">
+                        <span class="float-left mr-1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <h5 class="card-title float-right">BẢNG GIÁ</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <div" class="w-100 btn rounded">
+            
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="row p-0">
+                        <h5 class="col-6 card-title" >Đừng vứt pin cũ đi nhé!</h5>
+
+                        <div class="col-6 p-0 m-0">
+                            <p style="font-size: 14px;" class="p-1">Một số điểm thu thập pin cũ ở TP.HCM</p>
+                            <a class="btn btn-round text-white" style="background-color: #94BCA4;" href="{{url_for('mapPin')}}">Bản đồ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+{% endblock %}

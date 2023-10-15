@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+   ĐƠN CỦA TÔI
+{% endblock %}
+{% block content %}
+    <!--TÌM KIẾM  -->
+    <div class="input-group mt-3">
+        <form class="form-inline">
+            <input class="form-control col-10" type="search" placeholder="Tìm kiếm" aria-label="Search"/>
+            <button id="search-button" type="button" class="btn btn-primary col-2" type="submit">
+            <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <!-- SEARCH -->
+    <div class="row align-items-center w-100 container-fluid">
+        {% for item in rows%}
+            <div class="card mt-2" style="height: 80px; width: 230px;">
+                <div class="ml-2 row w-100 h-100">
+                    <div class="col float-left align-middle h-100">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center h-100">
+                            <!-- LINK IMG -->
+                            <img src="{{url_for('static', filename='images/carton.jpeg')}}"     
+                            class="rounded img-thumbnail" alt="..." style="height: 100%;">
+                        </div>
+                    </div>
+                    
+                    <div class="col float-right">
+                        <div class="card-body p-0 text-center h-100" style="color: black !important;">
+                            <div class="p-0 d-flex flex-wrap align-items-left justify-content-start h-100 pt-2">
+                                <!-- name of product -->
+                                <h6 class="card-title m-0">{{item["time"]}}</h6>
+                                <!-- price of produc -->
+                                <h6 class="card-title m-0">{{item["shipper"]}} VND</h6>
+                                <h6>
+                                    {% if item["status"] == "Xác nhận đã giao" %}
+                                        <span class="badge bg-success">{{item["status"]}}</span>
+                                        {% else %}
+                                        <span class="badge bg-primary">{{item["status"]}}</span>
+                                    {% endif %}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
