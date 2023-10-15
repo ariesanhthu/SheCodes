@@ -14,10 +14,10 @@ Qua đó có thể thấy, việc tạo ra một nền tảng để kết nối 
 3) Tính cạnh tranh cao trong việc tìm "đơn" mỗi ngày.
 4) Giá không được xác thực nên đôi khi mua nhầm giá dẫn đến lỗ vốn.
 ## Công nghệ sử dụng:
-- Lập trình web app Android
-- Thuật toán tính toán đường đi ngắn nhất để đưa ra cho các cô chú thu gom ve chai lộ trình hằng ngày dựa trên địa chỉ của người bán.
-- Thuật toán ghép đơn hàng của người bán với vựa gần nhất.
-- Thuật toán chia đơn đồng đều cho những cô chú thu gom trong cùng một vựa.
+- Lập trình web app Android 
+- Thuật toán tính toán đường đi ngắn nhất để đưa ra cho các cô chú thu gom ve chai lộ trình hằng ngày dựa trên địa chỉ của người bán. (VD: Grab)
+- Thuật toán ghép đơn hàng của người bán với vựa gần nhất. (VD: Grab)
+- Thuật toán chia đơn đồng đều cho những cô chú thu gom trong cùng một vựa. (VD: Chức năng chia đơn tính tiền của ZaloPay)
 ## Hướng phát triển trong tương lai:
 - Mở rộng app sang IOS.
 - Công nghệ AI nhận diện từng loại ve chai qua hình ảnh (dành cho những cô chú thu gom chưa có kinh nghiệm trong việc phân loại ve chai).
