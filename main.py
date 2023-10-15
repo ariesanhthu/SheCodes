@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+from flask import *
+import sqlite3, hashlib, os
+from werkzeug.utils import secure_filename
+from sqlalchemy.orm import DeclarativeBase
 
 class Base(DeclarativeBase):
   pass
@@ -9,9 +13,10 @@ db = SQLAlchemy(model_class=Base)
 app = Flask(__name__)
 
 #config db
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.sqlite"
-
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///F:\\NGUYEN ANH THU\\projects\\myproject\\instance\\database.db"
+app.config["SECRET_KEY"] = "123"
 db.init_app(app)
+
 
 # class User(db.Model):
 #    id = db.Column(db.Integer, primary_key = True)
@@ -116,24 +121,32 @@ def homeNguoiThu():
     return render_template("homeNguoiThu.html")
 
 
-#APP USER
-users = []
-users.append(User('A', "admin", "01", "123"))
-users.append(User('A', "shipper", "02", "123"))
-users.append(User('A', "manager", "03", "123"))
-users.append(User('A', "seller", "04", "123"))
+def is_valid(phone, password):
+    con = sqlite3.connect('F:\\NGUYEN ANH THU\\projects\\myproject\\instance\\database.db')
+    cur = con.cursor()
+    cur.execute('SELECT PhoneAppUser, PasswordAppUser FROM AppUsers')
+    data = cur.fetchall()
+    print(data)
+    for row in data:
+        if row[0] == phone and row[1] == password:
+            return True
+    return False
 
-
-@app.route('/DangNhap', methods = ['GET', 'POST'])
+@app.route('/DangNhap', methods = ['POST','GET'])
 def DangNhap():
-    if request.method == "POST":
-        sdt = request.form["sdt"]
-        us
-        if(sdt == "01"): us = users[0]
-        if(sdt == "02"): us = users[1]; return render_template("homeNguThu.html", us)
-        if(sdt == "03"): us = users[2]; return render_template("homeVua", us)
-        if(sdt == "04"): us = users[3]; return render_template("home.html", us)
-        return render_template("home.html")
+    print('aa')
+    if request.method == 'POST':
+        phone = request.form['sdt']
+        password = request.form['matkhau']
+        print(is_valid(phone, password))
+        if is_valid(phone, password):
+            session['sdt'] = phone
+            return redirect(url_for('home_page'))
+        else:
+            error = 'Invalid UserId / Password'
+            return render_template('DangNhap.html', error=error)
+    else: 
+        return render_template('DangNhap.html')
 
 
 #VỰA
