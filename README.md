@@ -21,4 +21,3 @@ Qua đó có thể thấy, việc tạo ra một nền tảng để kết nối 
 ## Hướng phát triển trong tương lai:
 - Mở rộng app sang IOS.
 - Công nghệ AI nhận diện từng loại ve chai qua hình ảnh (dành cho những cô chú thu gom chưa có kinh nghiệm trong việc phân loại ve chai).
-## Cách hoạt động:
