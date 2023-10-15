@@ -7,8 +7,8 @@ Hiện nay, tất cả những vấn đề trên đều trở nên tệ hơn khi
 
 Qua đó có thể thấy, việc tạo ra một nền tảng để kết nối người mua-bán ve chai và vựa ve chai với nhau là vô cùng quan trọng trong việc bảo vệ môi trường, giảm lãng phí và khai thác hết giá trị từ rác thải sinh hoạt, khuyến khích mọi người giữ lại các loại rác có thể tái chế được, quan trọng nhất là mang lại một cuộc sống tốt hơn cho lực lượng lao động trong nghề ve chai-đồng nát. Vì thế, EcoWaste - một ứng dụng hoàn toàn miễn phí đã được ra đời để kết nối ba đối tượng trên với nhau.
 ## Chức năng nổi bật:
-- Kết nối cả ba đối tượng: người thu gom, người bán và vựa ve chai lại với nhau.
-- Giải quyết được bốn vấn đề chính mà các cô chú thu gom thường gặp phải:
+1) Kết nối cả ba đối tượng: người thu gom, người bán và vựa ve chai lại với nhau.
+2) Giải quyết được bốn vấn đề chính mà các cô chú thu gom thường gặp phải:
 + Thu nhập bấp bênh do có ngày có "đơn", có ngày không.
 + Thường phải đi hàng chục cây số mỗi ngày để kiếm "đơn".
 + Tính cạnh tranh cao trong việc tìm "đơn" mỗi ngày.
