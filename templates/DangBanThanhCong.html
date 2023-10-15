@@ -5,10 +5,10 @@
 
 {% block content %}
 <div>
-    <h3 class="text-title">Đặt đơn thành công!</h3>
-    <div>
-        <a class="btn btn-round">Trang chủ</a>
-        <a class="btn btn-round">Đơn của tôi</a>
+    <h3 class="text-title text-center h-100 m-5">Đặt đơn thành công!</h3>
+    <div class="text-center">
+        <a class="btn btn-round" href="{{url_for('home_page')}}">Trang chủ</a>
+        <a class="btn btn-round" style="background-color: #94BCA4;" href="{{url_for('DonCuaToi')}}">Đơn của tôi</a>
     </div>
 </div>
 {% endblock %}

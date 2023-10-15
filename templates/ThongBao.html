@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+    TRA CỨU GIÁ
+{% endblock %}
+{% block content %}
+    <!--TÌM KIẾM  -->
+    <div class="input-group mt-3">
+        <form class="form-inline">
+            <input class="form-control col-10" type="search" placeholder="Tìm kiếm" aria-label="Search"/>
+            <button id="search-button" type="button" class="btn btn-primary col-2" type="submit">
+            <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <!-- SEARCH -->
+    <div class="row align-items-center w-100 container-fluid">
+        {% for item in thongbaos %}
+            <div class="card mt-2" style="height: 100px; width: 200px;">
+                    <div class="col float-right">
+                        <div class="card-body p-0 text-center h-100" style="color: black !important;">
+                            <div class="p-0 d-flex flex-wrap align-items-left justify-content-start h-100 pt-2">
+                                <!-- name of product -->
+                                <h6 class="card-title m-0 col-12">{{item["mess"]}}</h6>
+                                <a href="#" class="btn w-100 justify-content-end d-flex text-success" onclick="ThongBao()">
+                                    {% if item["mess"] == "Xác nhận giao hàng hôm nay!" %}
+                                        Có
+                                    {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        function ThongBao(){
+            alert('Đã xác nhận!');
+        }
+    </script>
+{% endblock %}

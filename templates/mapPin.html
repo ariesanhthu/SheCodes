@@ -48,5 +48,6 @@ var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 {% block content %}
         <!-- Khai bao the div chua Map -->
         <div id="googleMap" style="width:100%;height: 600px;"></div>
+        <a class="btn btn-success btn-round" href="{{url_for('DangBan')}}">Chọn</a>
 {% endblock %}
 

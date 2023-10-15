@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+    TRANG CHỦ
+{% endblock %}
+
+{% block content %}
+    <div class="row container mt-4 ml-1">
+    <!-- link here!!! -->
+        
+        <a href="{{url_for('LoTrinh')}}" class="w-100 btn rounded">
+            
+            <div class="card ">
+                <div class="card-body text-center d-flex justify-content-center">
+                    <div class="float">
+                        <span class="float-left mr-1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <h5 class="card-title float-right">LỘ TRÌNH HÔM NAY</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- BẢNG GIÁ RÁC -->
+        <a href="{{url_for('DonCuaToi')}}" class="w-100 btn rounded">
+            
+            <div class="card ">
+                <div class="card-body text-center d-flex justify-content-center">
+                    <div class="float">
+                        <span class="float-left mr-1"><i class="fa-solid fa-calendar-days"></i></span>
+                        <h5 class="card-title float-right">ĐƠN CỦA TÔI</h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+{% endblock %}
