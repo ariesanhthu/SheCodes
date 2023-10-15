@@ -10,7 +10,7 @@ Qua đó có thể thấy, việc tạo ra một nền tảng để kết nối 
 - Kết nối cả ba đối tượng: người thu gom, người bán và vựa ve chai lại với nhau.
 - Giải quyết được bốn vấn đề chính mà các cô chú thu gom thường gặp phải:
 + Thu nhập bấp bênh do có ngày có "đơn", có ngày không.
-+ Thường phải đi hàng chục cây số mỗi ngày để kiếm "đơn"
++ Thường phải đi hàng chục cây số mỗi ngày để kiếm "đơn".
 + Tính cạnh tranh cao trong việc tìm "đơn" mỗi ngày.
 + Giá không được xác thực nên đôi khi mua nhầm giá dẫn đến lỗ vốn.
 ## Công nghệ sử dụng:
